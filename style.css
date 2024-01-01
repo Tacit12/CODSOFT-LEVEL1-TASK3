@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    max-width: 320px;
+    margin: auto;
+    padding: 15px;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    background-color: #402bdf;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    grid-column: span 4;
+    background-color: #f3f3f3;
+    text-align: right;
+    padding: 10px;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.5em;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 75px;
+}
+
+.btn:active {
+    background-color: #ccc;
+}
+
+/* Explicitly set the order of the "=" button */
+.btn:nth-child(4) { order: 3; }
